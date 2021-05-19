@@ -18,4 +18,4 @@ def unionArray(x, y, m, n):
 lst_a = [1, 2, 3, 4, 5]
 lst_b = [2, 3, 5, 6]
 
-unionArray(lst_a, lst_a, len(list_a), len(list_b))
+unionArray(lst_a, lst_a, len(lst_a), len(lst_b))
