@@ -28,6 +28,7 @@ def isPrime(A):
     return A-max(li), max(li)
 
 
+
 # This is the second Approach and takes too less time than first Approach
 
 import math
@@ -57,6 +58,7 @@ def isPrime(A):
     return A-max(li), max(li)
 
 
+
 # This is third Approach and this take also much time
 
 def isPrime(A):
@@ -77,6 +79,16 @@ def isPrime(A):
         else:
             if prime(i):
                 l.append(i)
+
+    li = []
+    for i in l:
+        for j in l:
+            if i+j==A:
+                li.append(i)
+                li.append(j)
+
+    return A-max(li), max(li)
+
 
 
 # This is forth Approach
@@ -100,6 +112,17 @@ def isPrime(A):
             if prime(i):
                 l.append(i)
 
+    
+    li = []
+    for i in l:
+        for j in l:
+            if i+j==A:
+                li.append(i)
+                li.append(j)
+
+    return A-max(li), max(li)
+
+
 
 # This is fifth Approach and this take little bit less time than upper approach
 def isPrime(n):
@@ -116,6 +139,7 @@ def isPrime(n):
         d = n-i
         if d in l:
             return d, i
+
 
 
 # THis is sixth Approach and takes much less time but this is take little bit high memory
