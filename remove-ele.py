@@ -36,7 +36,7 @@ If all assertions pass, then your solution will be accepted.
 
 """
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums) -> int:
 
         N = len(nums)
         if N==0 or N ==1:
