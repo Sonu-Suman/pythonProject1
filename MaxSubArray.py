@@ -97,3 +97,30 @@ class Solution:
 
 s = Solution()
 print(s.maxSubArray([-2,-1]))
+
+
+# This is the fifth type
+
+import sys
+
+def smallestSumSubarr(arr, n):
+    max_ending_here = -sys.maxsize - 1
+     
+    max_so_far = -sys.maxsize - 1
+     
+    for i in range(n):
+        if (max_ending_here > 0):
+            max_ending_here += arr[i]
+         
+        # else add the value arr[i] to max_ending_here
+        else:
+            max_ending_here = arr[i]
+          
+        # update max_so_far
+        max_so_far = max(max_so_far, max_ending_here)
+     
+    # required biggest sum contiguous subarray value
+    return max_so_far
+
+
+print(smallestSumSubarr([-2, -3, 4, -1, -2, 1, 5, -3], 8))
