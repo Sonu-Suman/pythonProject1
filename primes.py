@@ -18,6 +18,7 @@ def primes_sieve(n):
     return l 
 
 
+print(primes_sieve(100))
 # THis is Second Approach
 
 
@@ -36,3 +37,5 @@ def primes_sieve(n):
         l.append(i)
 
     return l
+
+print(primes_sieve(100))

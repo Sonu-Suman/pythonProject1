@@ -28,6 +28,7 @@ def isPrime(A):
     return A-max(li), max(li)
 
 
+# print(isPrime(16777214))
 
 # This is the second Approach and takes too less time than first Approach
 
@@ -58,37 +59,7 @@ def isPrime(A):
     return A-max(li), max(li)
 
 
-
-# This is third Approach and this take also much time
-
-def isPrime(A):
-    def prime(a):
-        if a==1:
-            return False
-        for i in range(2,  int(math.sqrt(a))+1):
-            if a%i==0:
-                return False
-        return True
-
-    l = []
-    for i in range(1, A):
-        if i>4:
-            if i%2!=0 or i%3!=0:
-                if prime(i):
-                    l.append(i)
-        else:
-            if prime(i):
-                l.append(i)
-
-    li = []
-    for i in l:
-        for j in l:
-            if i+j==A:
-                li.append(i)
-                li.append(j)
-
-    return A-max(li), max(li)
-
+print(isPrime(167772))
 
 
 # This is forth Approach
@@ -123,6 +94,7 @@ def isPrime(A):
     return A-max(li), max(li)
 
 
+print(isPrime(16777214))
 
 # This is fifth Approach and this take little bit less time than upper approach
 def isPrime(n):
@@ -141,6 +113,7 @@ def isPrime(n):
             return d, i
 
 
+print(isPrime(16777214))
 
 # THis is sixth Approach and takes much less time but this is take little bit high memory
 
@@ -166,7 +139,7 @@ def isPrime(n):
 
 
 
-
+# print(isPrime(16777214))
 
 # This is seventh Approach and this take too much less time and this is not memory extensive
 # and this file best Approach
@@ -191,4 +164,4 @@ def isPrime(n):
             return d, i
 
 
-print(isPrime(16777214))
+# print(isPrime(16777214))

@@ -3,26 +3,6 @@
 # This is the first approach
 # This is iterative method
 
-def mergetwolist(l1, l2):
-    p1, p2, res = l1, l2, ListNode()
-    p3 = res
-
-    while p1 and p2:
-        if p1.val<p2.val:
-            p3.next = p1
-            p1 = p1.next
-        else:
-            p3.next = p2
-            p2 = p2.next
-
-        p3 = p3.next
-    
-    p3.next = p1 if p1 else p2
-
-    return res.next
-
-# This is the second approach
-# This is iterative method
 
 def mergetwolist(l1, l2):
     res = ListNode()

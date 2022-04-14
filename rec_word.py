@@ -7,6 +7,7 @@ def recuersiveWord(sentence):
     for word in words:
         stock.insert(0, word)
 
+    stock[0] = list(stock[0])[0].upper() + stock[0][1:]
     return ' '.join(word for word in stock)
 
 

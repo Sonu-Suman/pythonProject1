@@ -30,7 +30,8 @@ def finding_subset(su, sum):
 				d = su[i] + su[j]
 				s[su[i]].append(d)
 				if d==sum:
-					return s, (su[i], su[j])
+					return "Yes, we found that pair", (su[i], su[j])
+	return "pair don't exist."
 
 
 print(finding_subset([3, 34, 15, 4, 12, 5, 2], 9))
@@ -42,8 +43,8 @@ print(finding_subset([3, 34, 15, 4, 12, 5, 2], 9))
 def finding_pair_sum(su, sum):
 
     if sum==0:
-	    return True
-
+        return True
+        
     for i in range(len(su)):
         if su[i]==sum:
             return 0, su[i]
@@ -52,14 +53,14 @@ def finding_pair_sum(su, sum):
                 if su[i]+su[j]==sum:
                     return su[i], su[j]
 
-    return False
+    return "Pair don't exist in the list"
 
     
 print(finding_pair_sum([3, 34, 15, 4, 12, 5, 2], 30))
 
 
 #----------------------------------------------------------------
-# This is third term.
+# This is third method.
 
 # A recursive solution for subset sum problem
 
@@ -197,3 +198,22 @@ else:
 	print("NO")
 
 
+# This is the sixth method
+
+def findPair(arr, target):
+	if len(arr)==0:
+		return 0
+
+	if target==0:
+		return 1
+	for i in range(len(arr)-1):
+		s = target-arr[i]
+		if s in arr[i+1:]:
+			return "Yes, we found the pair."
+	return "Pair doesn't exist in the list."
+
+
+a = [1, 5, 3, 7, 4]
+sum = 12
+
+print(findPair(a, sum))

@@ -60,6 +60,7 @@ print(f(nums1, m, nums2, n))
 def find(nums1, m , nums2, n):
     # last index of nums1
     last = n+m -1
+    
 
     # merge in reverse order
     while n>0 and m>0:
@@ -75,4 +76,10 @@ def find(nums1, m , nums2, n):
         nums1[last] = nums2[n-1]
         n, last = n-1, last-1
 
-        
+    return nums1
+
+
+nums1 = [1, 2, 3, 0, 0, 0]
+nums2 = [2,5,6]
+
+print(find(nums1, len(nums1[:-n]), nums2, n))

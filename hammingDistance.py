@@ -61,9 +61,9 @@ def hammingDistance(A):
         l.append('{:032b}'.format(i))
         # print('{:032b}'.format(i))
     c=0
-    print(l)
+    # print(l)
     l=list(zip(*l))
-    print(l)
+    # print(l)
     for i in l:
         a=i.count('0')
         b=i.count('1')

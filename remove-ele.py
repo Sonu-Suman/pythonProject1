@@ -53,13 +53,34 @@ class Solution:
                 
             prev = val
             
-        return cnt
+        return cnt, nums
 
 
+arr = [1, 2, 2, 2, 3, 4, 5, 5, 6]
+s = Solution()
+print(s.removeDuplicates(arr))
+
+
+# This is the second method but this is only working on even repeatable elements
+
+def remove(arr):
+    l = len(arr)
+    prev = None
+    for i in range(l):
+        current = arr[i]
+        if current == prev:
+            arr.remove(arr[i])
+            arr.append(current)
+        prev = current
+
+    return arr
+
+
+arr = [1, 2, 2, 3, 4, 5, 5, 6]
+print(remove(arr))
 
 
 # THis is the second problem
-
 
 """
 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. 
@@ -111,4 +132,9 @@ class Solution:
                 nums.append(i)
 
 
-        return len(nums)
+        return nums, len(nums)
+
+arr = [1, 2, 2, 3, 4, 5, 5, 6]
+val = 2
+s = Solution()
+print(s.removeElement(arr, 5))
